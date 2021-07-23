@@ -1,0 +1,43 @@
+#д/з: создать два класса. 1)круги, 2)треугольники
+#св-ва круга: радиус, цвет, диаметр
+#(методы)найти: площадь(piR**2), длина окружности(2piR)
+
+#св-ва треуг: высота, длина нижней части
+#(методы)найти: площадь(h*a)/2
+
+#создаем по 3 объекта в кажом классе
+#3 круга с разными радиусами и 3 треугольника с разной стороной и высотой
+
+class Cyrcle:
+    def __init__(self, radius, color, diametr):
+        self.radius = radius
+        self. color = color
+        self.diametr = diametr
+    def formula_cyrcle_square(self):
+        return (3.14 * self.radius)**2
+
+
+class Triangle:
+    def __init__(self, height, length_down):
+        self.height = height
+        self.length_down = length_down
+    def sq(self):
+        return((self.height * self.length_down)/2)
+
+# Cyrcle ---------------
+object1 = Cyrcle(10, 23, 32)
+object2 = Cyrcle(32, 2, 6)
+object3 = Cyrcle(213, 4, 1)
+
+print(object1.formula_cyrcle_square())
+print(object2.formula_cyrcle_square())
+print(object3.formula_cyrcle_square())
+
+#Triangle ------------------
+tri1 = Triangle(5, 14)
+tri2 = Triangle(12, 3)
+tri3 = Triangle(10, 7)
+
+print(tri1.sq())
+print(tri2.sq())
+print(tri3.sq())
