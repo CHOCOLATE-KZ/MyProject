@@ -11,11 +11,18 @@ bot = TeleBot(TOKEN)
 def no_sad(message):
     if message.text == "мне грустно" or message.text == "Мне грустно":
         bot.send_message(message.chat.id, "Не грусти, всё будет хорошо)☺️")
-
-@bot.message_handler(content_types=['image'])
-def send_img(message):
-    if message.text == "др":
+    elif message.text == "др" or message.text == "Др":
         photo = open("birthday-1061.jpg", 'rb')
         bot.send_photo(message.chat.id, photo)
+
+
+
+# @bot.message_handler(content_types=['text'])
+# def send_img(message):
+#     if message.text == "др":
+#         photo = open("birthday-1061.jpg", 'rb')
+#         bot.send_photo(message.chat.id, photo)
+
+
 
 bot.polling()
